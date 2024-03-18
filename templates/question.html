@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <ul>
+        <li>ФИО: {{name}}</li>
+        <li>место работы: {{work}}</li>
+        <li>должность/место учебы/опыт работы: {{chin}}</li>
+        <li>вопрос: {{question}}</li>
+        <li>вопросов осталось: {{count}}</li>
+    </ul>
+    <div class='mail'>
+        <form action="/question/" method="POST">
+            <button class='podv' type="submit" name='index' value='{{anoth}}'>
+                Еще вопрос
+            </button>
+        </form>
+        <a href="/" class="back">Меню</a>
+
+    </div>
+    
+</body>
+</html>
